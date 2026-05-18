@@ -1,0 +1,171 @@
+/* ==========================================================================
+   1. RESET DI BASE E TIPOGRAFIA
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f5f8;
+    color: #333333;
+}
+
+/* ==========================================================================
+   2. CONFIGURAZIONE VARIABILI DI COLORE (Tema dinamico per Marca)
+   ========================================================================== */
+body.pagina-kawasaki { --colore-tema: #32cd32; } /* Verde */
+body.honda    { --colore-tema: #ff0000; } /* Rosso */
+body.ktm      { --colore-tema: #ff6600; } /* Arancione */
+
+/* ==========================================================================
+   3. STRUTTURA E COMPONENTI SEMANTICI (Header, Nav, Main, Footer)
+   ========================================================================== */
+
+/* Header */
+
+   header {
+    background-color: #111827; /* Nero Carbonio */
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+}
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    color: var(--colore-tema); /* Si colora automaticamente */
+    transition: color 0.3s ease;
+}
+
+header p {
+    margin: 8px 0 0 0;
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Schiarito per correggere il contrasto sul fondo scuro */
+}
+
+/* Barra di Navigazione */
+nav {
+    background-color: #162447;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione fluida */
+}
+
+/* Elemento Contenuto Principale */
+main {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Piè di Pagina */
+footer {
+    background-color: #162447;
+    color: #ffffff; /* Modificato in bianco per renderlo leggibile */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 3px solid var(--colore-tema); /* Si colora automaticamente */
+    transition: border-color 0.3s ease;
+}
+
+/* ==========================================================================
+   4. GESTIONE ELEMENTI INTERNI (Titoli, Liste, Immagini)
+   ========================================================================== */
+main h2 {
+    color: #1a1a2e;
+    font-size: 1.8rem;
+    border-left: 5px solid var(--colore-tema); /* Si colora automaticamente */
+    padding-left: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+main h3 {
+    color: #1f4068;
+    font-size: 1.3rem;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--colore-tema); /* Si colora automaticamente */
+    padding-bottom: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.bike-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+}
+
+ul, ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+li strong {
+    color: #1f4068;
+}
+
+/* ==========================================================================
+   5. LOGICA DI NAVIGAZIONE AVANZATA (Pulsante Attivo e Hover Selettivi)
+   ========================================================================== */
+
+/* Stato Attivo: Prende automaticamente il colore della pagina corrente */
+nav ul li a.active {
+    background-color: var(--colore-tema);
+    color: #000000;
+}
+
+/* Effetti Hover Dinamici: Colore specifico per ogni tasto in qualsiasi pagina */
+nav ul li a[href="kawasaki.html"]:hover {
+    background-color: #32cd32;
+    color: #000000;
+}
+
+nav ul li a[href="honda.html"]:hover {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+nav ul li a[href="ktm.html"]:hover {
+    background-color: #ff6600;
+    color: #000000;
+}
